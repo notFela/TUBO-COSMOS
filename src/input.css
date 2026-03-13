@@ -1,82 +1,78 @@
 @import "tailwindcss";
 
-/* ================= FONTS ================= */
-
-/* Space Grotesk */
+/* space-grotesk-300 - latin */
 @font-face {
-  font-display: swap;
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Space Grotesk";
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/space-grotesk-v22-latin-300.woff2") format("woff2");
+  src: url("../fonts/space-grotesk-v22-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
+/* space-grotesk-regular - latin */
 @font-face {
-  font-display: swap;
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Space Grotesk";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/space-grotesk-v22-latin-regular.woff2") format("woff2");
+  src: url("../fonts/space-grotesk-v22-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
+/* space-grotesk-500 - latin */
 @font-face {
-  font-display: swap;
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Space Grotesk";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/space-grotesk-v22-latin-500.woff2") format("woff2");
+  src: url("../fonts/space-grotesk-v22-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
+/* space-grotesk-600 - latin */
 @font-face {
-  font-display: swap;
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Space Grotesk";
   font-style: normal;
   font-weight: 600;
-  src: url("../fonts/space-grotesk-v22-latin-600.woff2") format("woff2");
+  src: url("../fonts/space-grotesk-v22-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
+/* space-grotesk-700 - latin */
 @font-face {
-  font-display: swap;
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Space Grotesk";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/space-grotesk-v22-latin-700.woff2") format("woff2");
+  src: url("../fonts/space-grotesk-v22-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* Inter */
+/* inter-regular - latin */
 @font-face {
-  font-display: swap;
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/inter-v20-latin-regular.woff2") format("woff2");
+  src: url("../fonts/inter-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
+/* inter-500 - latin */
 @font-face {
-  font-display: swap;
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/inter-v20-latin-500.woff2") format("woff2");
+  src: url("../fonts/inter-v20-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
+/* inter-600 - latin */
 @font-face {
-  font-display: swap;
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  src: url("../fonts/inter-v20-latin-600.woff2") format("woff2");
+  src: url("../fonts/inter-v20-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
+/* inter-700 - latin */
 @font-face {
-  font-display: swap;
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/inter-v20-latin-700.woff2") format("woff2");
+  src: url("../fonts/inter-v20-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-/* ================= THEME ================= */
 
 @theme {
   --font-sans: "Space Grotesk", sans-serif;
@@ -87,12 +83,9 @@
   --color-nebula-purple: #16213e;
   --color-starlight: #e94560;
   --color-accent-cyan: #0f3460;
-
   --color-text-primary: #eaeaea;
   --color-text-secondary: #a0a0a0;
 }
-
-/* ================= BASE ================= */
 
 @layer base {
   html {
@@ -102,105 +95,93 @@
   body {
     @apply overflow-x-hidden font-inter bg-deep-space text-text-primary leading-relaxed;
   }
-
   .container {
-    @apply max-w-7xl w-full mx-auto px-6;
+    @apply max-w-7xl w-full mx-auto px-4;
   }
 
+  .container {
+    @apply max-w-7xl w-full mx-auto px-12;
+  }
   h1 {
     font-size: clamp(3.4rem, 6vw, 5rem);
-    @apply font-bold font-sans tracking-tight;
+    @apply font-bold;
   }
 
   h2 {
     font-size: clamp(2rem, 5vw, 2.5rem);
-    @apply font-bold font-sans tracking-tight;
+    @apply font-bold;
   }
 
   h3 {
     font-size: clamp(1.25rem, 4vw, 2rem);
-    @apply font-bold font-sans tracking-tight;
+    @apply font-bold;
   }
 
   h4 {
     font-size: clamp(1.5rem, 3vw, 1.75rem);
-    @apply font-sans tracking-tight;
   }
 
   h5 {
-    @apply text-xl font-semibold font-sans;
+    @apply text-xl font-semibold;
   }
 
   h6 {
-    @apply text-lg font-semibold font-sans;
+    @apply text-lg font-semibold;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sans tracking-tight;
   }
 }
 
-/* ================= COMPONENTS ================= */
-
 @layer components {
-  /* ===== HEADER ===== */
-
+  /* header s */
   .headerNav ul {
-    @apply flex flex-col gap-5 fixed w-full right-0
-  text-left items-start overflow-hidden
-  h-0 opacity-0 duration-300
-  top-24
-
-  md:opacity-100
-  md:flex-row
-  md:items-center
-  md:top-auto
-  md:h-auto
-  md:static
-  md:shadow-none;
+    @apply flex flex-col gap-5 fixed w-full top-26 text-left 
+    items-start overflow-hidden right-0 h-0 opacity-0 duration-300
+    /* tablet - desktop */
+    md:opacity-100 md:flex-row md:items-center md:top-auto
+    md:h-auto md:static md:shadow-none;
   }
 
   .headerNav ul.open {
-    @apply h-fit opacity-100
-  bg-white dark:bg-gray-900 shadow-md
-  px-4 py-10
-  top-24
-
-  md:px-0
-  md:shadow-none;
+    @apply h-fit opacity-100 bg-white dark:bg-gray-900 shadow-md w-full top-22
+    px-4 py-10 pb-3 duration-300
+    /* tablet-desktop */
+    md:shadow-none md:px-0 md:pb-0;
   }
-
-  /* ===== MENU TOGGLE ===== */
-
-  .toggleMenu {
-    @apply flex flex-col gap-1 md:hidden;
-  }
-
   .toggleMenu span {
-    @apply inline-block w-5 h-0.5 rounded-xl bg-black/80 dark:bg-white/80 transition-all;
+    @apply inline-block w-5 h-0.5 rounded-xl bg-black/80 dark:bg-white/80;
   }
-
   .toggleMenu.open span:first-child {
-    @apply rotate-45 translate-y-2;
+    @apply rotate-45 translate-y-2 duration-100;
   }
-
   .toggleMenu.open span:nth-child(2) {
     @apply opacity-0;
   }
-
   .toggleMenu.open span:last-child {
-    @apply -rotate-45 -translate-y-1;
+    @apply -rotate-45 -translate-y-1 duration-100;
   }
 
-  /* ===== BACKDROP ===== */
+  .toggleMenu {
+    @apply flex flex-col gap-1 
+    /* tablet-desktop */
+    md:hidden;
+  }
 
   .transparent {
     @apply hidden;
   }
-
   .transparent.open {
-    @apply block fixed h-screen w-full backdrop-blur-sm
-  left-0 top-0;
+    @apply block fixed h-screen w-full backdrop-blur-sm left-0 
+    top-75 duration-300 overflow-y-hidden;
   }
 
-  /* ===== NAV LINK EFFECT ===== */
-
+  /* nav hover with underline effect */
   .headerNav ul li a {
     @apply relative text-text-primary/70 font-medium transition-colors duration-300;
   }
@@ -214,12 +195,11 @@
     @apply w-full;
   }
 
-  /* ===== BUTTONS ===== */
+  /* header end */
 
+  /* button */
   .btn {
-    @apply inline-flex items-center justify-center gap-2
-  px-8 py-3.5 rounded-full font-sans font-semibold text-sm
-  cursor-pointer transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full font-sans font-semibold text-sm cursor-pointer transition-all duration-300;
   }
 
   .btn-primary {
@@ -227,20 +207,16 @@
   }
 
   .btn-outline {
-    @apply bg-transparent border border-text-secondary text-text-primary
-  hover:border-text-primary active:scale-95;
+    @apply bg-transparent border border-text-secondary text-text-primary hover:border-text-primary active:scale-95;
   }
-
-  /* ===== GRADIENT TEXT ===== */
-
+  /* gradient text */
   .text-gradient {
     @apply bg-gradient-to-b from-white to-starlight bg-clip-text text-transparent font-bold;
   }
-
-  /* ===== STATS ===== */
-
+  /* metric cards */
   .stat-card {
-    @apply bg-cosmic-blue rounded-xl p-14 text-center;
+    @apply bg-cosmic-blue rounded-xl p-14 text-center
+    hover:-translate-y-2 hover:border-starlight;
   }
 
   .stat-card-value {
@@ -250,19 +226,12 @@
   .stat-card-label {
     @apply text-text-secondary text-sm mt-5;
   }
-
-  /* ===== SOCIAL ===== */
-
+  /* cta btn */
   .social-btn {
-    @apply w-10 h-10 rounded-full border border-white/20
-  flex items-center justify-center
-  text-text-secondary
-  hover:border-white/50 hover:text-text-primary
-  transition-all duration-300;
+    @apply w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-text-secondary hover:border-white/50 hover:text-text-primary transition-all duration-300;
   }
 
-  /* ===== MISSION CARD ===== */
-
+  /* mission card */
   .mission-card {
     @apply relative bg-cosmic-blue rounded-2xl overflow-hidden;
   }
@@ -272,9 +241,7 @@
   }
 
   .mission-card-badge {
-    @apply absolute top-4 right-4 text-xs font-bold tracking-widest
-  px-4 py-1.5 rounded-full border
-  bg-starlight/40 text-starlight;
+    @apply absolute top-4 right-4 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full border bg-starlight/40 text-starlight;
   }
 
   .mission-card-badge-active {
@@ -308,4 +275,51 @@
   .mission-card-footer span {
     @apply flex items-center gap-1.5;
   }
+}
+/* missions cards */
+
+.mission-card {
+  @apply bg-cosmic-blue rounded-xl overflow-hidden
+  border border-white/10
+  transition-all duration-300
+  hover:-translate-y-2 hover:border-starlight;
+}
+
+.mission-img {
+  @apply w-full h-70 object-cover;
+}
+/* ACTIVE/UPCOMING BADGE */
+.mission-badge {
+  @apply absolute top-4 right-4 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full border bg-starlight/40 text-starlight;
+}
+
+.badge-active {
+  @apply bg-green-900/80 text-green-400 border-green-600/50;
+}
+
+.mission-content {
+  @apply p-6 space-y-4;
+}
+
+.mission-date {
+  @apply text-sm text-starlight font-medium;
+}
+
+.mission-meta {
+  @apply flex gap-6 text-text-secondary text-sm pt-2;
+}
+.mission-card {
+  @apply relative bg-cosmic-blue rounded-xl overflow-hidden
+  border border-white/10
+  transition-all duration-500 absolute;
+}
+
+/* nav link */
+
+.nav-link {
+  @apply transition duration-300 hover:text-starlight;
+}
+
+.nav-link.active {
+  @apply text-starlight border-b-2 border-starlight pb-5;
 }
