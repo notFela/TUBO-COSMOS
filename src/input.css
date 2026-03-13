@@ -1,0 +1,311 @@
+@import "tailwindcss";
+
+/* ================= FONTS ================= */
+
+/* Space Grotesk */
+@font-face {
+  font-display: swap;
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/space-grotesk-v22-latin-300.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/space-grotesk-v22-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/space-grotesk-v22-latin-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/space-grotesk-v22-latin-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/space-grotesk-v22-latin-700.woff2") format("woff2");
+}
+
+/* Inter */
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/inter-v20-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/inter-v20-latin-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/inter-v20-latin-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/inter-v20-latin-700.woff2") format("woff2");
+}
+
+/* ================= THEME ================= */
+
+@theme {
+  --font-sans: "Space Grotesk", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+  --color-deep-space: #0a0a0f;
+  --color-cosmic-blue: #1a1a2e;
+  --color-nebula-purple: #16213e;
+  --color-starlight: #e94560;
+  --color-accent-cyan: #0f3460;
+
+  --color-text-primary: #eaeaea;
+  --color-text-secondary: #a0a0a0;
+}
+
+/* ================= BASE ================= */
+
+@layer base {
+  html {
+    @apply scroll-smooth scroll-p-16;
+  }
+
+  body {
+    @apply overflow-x-hidden font-inter bg-deep-space text-text-primary leading-relaxed;
+  }
+
+  .container {
+    @apply max-w-7xl w-full mx-auto px-6;
+  }
+
+  h1 {
+    font-size: clamp(3.4rem, 6vw, 5rem);
+    @apply font-bold font-sans tracking-tight;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    @apply font-bold font-sans tracking-tight;
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 4vw, 2rem);
+    @apply font-bold font-sans tracking-tight;
+  }
+
+  h4 {
+    font-size: clamp(1.5rem, 3vw, 1.75rem);
+    @apply font-sans tracking-tight;
+  }
+
+  h5 {
+    @apply text-xl font-semibold font-sans;
+  }
+
+  h6 {
+    @apply text-lg font-semibold font-sans;
+  }
+}
+
+/* ================= COMPONENTS ================= */
+
+@layer components {
+  /* ===== HEADER ===== */
+
+  .headerNav ul {
+    @apply flex flex-col gap-5 fixed w-full right-0
+  text-left items-start overflow-hidden
+  h-0 opacity-0 duration-300
+  top-24
+
+  md:opacity-100
+  md:flex-row
+  md:items-center
+  md:top-auto
+  md:h-auto
+  md:static
+  md:shadow-none;
+  }
+
+  .headerNav ul.open {
+    @apply h-fit opacity-100
+  bg-white dark:bg-gray-900 shadow-md
+  px-4 py-10
+  top-24
+
+  md:px-0
+  md:shadow-none;
+  }
+
+  /* ===== MENU TOGGLE ===== */
+
+  .toggleMenu {
+    @apply flex flex-col gap-1 md:hidden;
+  }
+
+  .toggleMenu span {
+    @apply inline-block w-5 h-0.5 rounded-xl bg-black/80 dark:bg-white/80 transition-all;
+  }
+
+  .toggleMenu.open span:first-child {
+    @apply rotate-45 translate-y-2;
+  }
+
+  .toggleMenu.open span:nth-child(2) {
+    @apply opacity-0;
+  }
+
+  .toggleMenu.open span:last-child {
+    @apply -rotate-45 -translate-y-1;
+  }
+
+  /* ===== BACKDROP ===== */
+
+  .transparent {
+    @apply hidden;
+  }
+
+  .transparent.open {
+    @apply block fixed h-screen w-full backdrop-blur-sm
+  left-0 top-0;
+  }
+
+  /* ===== NAV LINK EFFECT ===== */
+
+  .headerNav ul li a {
+    @apply relative text-text-primary/70 font-medium transition-colors duration-300;
+  }
+
+  .headerNav ul li a::after {
+    content: "";
+    @apply absolute left-0 -bottom-1 w-0 h-0.5 bg-starlight transition-all duration-300;
+  }
+
+  .headerNav ul li a:hover::after {
+    @apply w-full;
+  }
+
+  /* ===== BUTTONS ===== */
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2
+  px-8 py-3.5 rounded-full font-sans font-semibold text-sm
+  cursor-pointer transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-starlight text-white hover:opacity-90 active:scale-95;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border border-text-secondary text-text-primary
+  hover:border-text-primary active:scale-95;
+  }
+
+  /* ===== GRADIENT TEXT ===== */
+
+  .text-gradient {
+    @apply bg-gradient-to-b from-white to-starlight bg-clip-text text-transparent font-bold;
+  }
+
+  /* ===== STATS ===== */
+
+  .stat-card {
+    @apply bg-cosmic-blue rounded-xl p-14 text-center;
+  }
+
+  .stat-card-value {
+    @apply text-starlight font-sans font-bold text-4xl;
+  }
+
+  .stat-card-label {
+    @apply text-text-secondary text-sm mt-5;
+  }
+
+  /* ===== SOCIAL ===== */
+
+  .social-btn {
+    @apply w-10 h-10 rounded-full border border-white/20
+  flex items-center justify-center
+  text-text-secondary
+  hover:border-white/50 hover:text-text-primary
+  transition-all duration-300;
+  }
+
+  /* ===== MISSION CARD ===== */
+
+  .mission-card {
+    @apply relative bg-cosmic-blue rounded-2xl overflow-hidden;
+  }
+
+  .mission-card-img {
+    @apply w-full object-cover h-72;
+  }
+
+  .mission-card-badge {
+    @apply absolute top-4 right-4 text-xs font-bold tracking-widest
+  px-4 py-1.5 rounded-full border
+  bg-starlight/40 text-starlight;
+  }
+
+  .mission-card-badge-active {
+    @apply bg-green-900/80 text-green-400 border-green-600/50;
+  }
+
+  .mission-card-body {
+    @apply p-6;
+  }
+
+  .mission-card-date {
+    @apply text-starlight text-sm font-semibold flex items-center gap-2;
+  }
+
+  .mission-card-title {
+    @apply text-text-primary font-bold mt-2;
+  }
+
+  .mission-card-desc {
+    @apply text-text-secondary text-sm mt-3 leading-relaxed;
+  }
+
+  .mission-card-divider {
+    @apply border-t border-white/20 mt-8;
+  }
+
+  .mission-card-footer {
+    @apply flex items-center gap-6 mt-6 text-text-secondary text-sm;
+  }
+
+  .mission-card-footer span {
+    @apply flex items-center gap-1.5;
+  }
+}
