@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="This is cosmos website" />
     <link rel="stylesheet" href="../dist/output.css" />
-    <title>COSMOS - Missions</title>
+    <title>Missions - Perseverance Rover</title>
   </head>
   <body>
     <!-- header -->
@@ -21,8 +21,8 @@
               <li><a href="../src/home.html">Home</a></li>
               <li><a href="../src/missions.html">Missions</a></li>
               <li><a href="../src/spacecraft.html">Spacecraft</a></li>
-              <li><a href="../src/spacecraft.html">Gallery</a></li>
-              <li><a href="../src/contact.html">Contact</a></li>
+              <li><a href="./gallery.html">Gallery</a></li>
+              <li><a href="./contact.html">Contact</a></li>
             </ul>
           </nav>
           <div class="toggleMenu">
@@ -61,35 +61,39 @@
             human knowledge and technological capability.
           </h5>
         </div>
-        <!-- cads wrapper -->
+        <!-- cards wrapper -->
         <div class="py-15 mt-1 grid grid-cols-1 gap-8 md:grid-cols-3">
           <!-- cards 1 -->
-          <div class="mission-card">
-            <div class="relative">
-              <img
-                src="../img/perseverancerover.jpg"
-                alt="Perseverance Rover"
-                class="mission-card-img"
-              />
-              <span class="mission-card-badge mission-card-badge-active"
-                >ACTIVE</span
-              >
-            </div>
-            <div class="mission-card-body">
-              <p class="mission-card-date">📅 Launched: July 2020</p>
-              <h4 class="mission-card-title">Perseverance Rover</h4>
-              <p class="mission-card-desc">
-                Exploring Mars' Jezero Crater to seek signs of ancient life and
-                collect samples for future return to Earth.
-              </p>
-              <hr class="mission-card-divider" />
-              <div class="mission-card-footer">
-                <span>🚀 Mars</span>
-                <span>🕐 Sol 987</span>
+          <a href="./perseverance_rover.html" class="block">
+            <div class="mission-card">
+              <div class="relative">
+                <img
+                  src="../img/perseverancerover.jpg"
+                  alt="Perseverance Rover"
+                  class="mission-card-img"
+                />
+                <span class="mission-card-badge mission-card-badge-active">
+                  ACTIVE
+                </span>
+              </div>
+
+              <div class="mission-card-body">
+                <p class="mission-card-date">📅 Launched: July 2020</p>
+                <h4 class="mission-card-title">Perseverance Rover</h4>
+                <p class="mission-card-desc">
+                  Exploring Mars' Jezero Crater to seek signs of ancient life
+                  and collect samples for future return to Earth.
+                </p>
+
+                <hr class="mission-card-divider" />
+
+                <div class="mission-card-footer">
+                  <span>🚀 Mars</span>
+                  <span>🕐 Sol 987</span>
+                </div>
               </div>
             </div>
-          </div>
-
+          </a>
           <!-- cards 2 -->
           <div class="mission-card">
             <div class="relative">
