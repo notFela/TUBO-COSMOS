@@ -20,7 +20,7 @@
             <ul>
               <li><a href="../src/home.html">Home</a></li>
               <li><a href="../src/missions.html">Missions</a></li>
-              <li><a href="#spacecraft">Spacecraft</a></li>
+              <li><a href="./spacecraft.html">Spacecraft</a></li>
               <li><a href="./gallery.html">Gallery</a></li>
               <li><a href="./contact.html">Contact</a></li>
             </ul>
@@ -36,8 +36,151 @@
       </div>
     </header>
 
-    <!-- our fleet -->
-    <section></section>
+    <!-- content -->
+    <div class="relative">
+      <!-- space bg -->
+      <div
+        id="home"
+        style="background-image: url(../img/Starry\ digital\ skyscape..png)"
+        class="h-[85rem] md:h-[47rem] bg-cover bg-center"
+      ></div>
+      <!-- content on top -->
+      <div class="absolute inset-0">
+        <div class="container">
+          <!-- title -->
+          <div class="text-center py-12">
+            <h2>Get in Touch</h2>
+            <p
+              class="text-text-secondary max-w-md mx-auto mt-4 max-w-sm md:max-w-xl"
+            >
+              Connect with our team for mission updates, educational resources,
+              or partnership opportunities.
+            </p>
+          </div>
+          <!-- wrapper -->
+          <div class="grid md:grid-cols-2 gap-10 md:px-60">
+            <!-- left -->
+            <div>
+              <div
+                class="flex flex-col items-center md:items-start text-center md:text-left"
+              >
+                <h2>Let's Explore Together</h2>
+                <p class="text-text-secondary mt-4">
+                  Whether you're a student, educator, or space enthusiast, we'd
+                  love to hear from you.
+                </p>
+
+                <!-- infos -->
+                <div class="flex flex-col gap-8 mt-10">
+                  <!-- mission control -->
+                  <div
+                    class="flex flex-col items-center md:flex-row md:items-start text-center md:text-left gap-3"
+                  >
+                    <div
+                      class="w-12 h-12 rounded-xl bg-starlight/20 flex items-center justify-center shrink-0"
+                    >
+                      <span>📍</span>
+                    </div>
+                    <div>
+                      <p class="text-text-primary font-bold">Mission Control</p>
+                      <p class="text-text-secondary mt-1">
+                        Johnson Space Center
+                      </p>
+                      <p class="text-text-secondary">Houston, Texas 77058</p>
+                    </div>
+                  </div>
+
+                  <!-- email -->
+                  <div
+                    class="flex flex-col items-center md:flex-row md:items-start text-center md:text-left gap-3"
+                  >
+                    <div
+                      class="w-12 h-12 rounded-xl bg-starlight/20 flex items-center justify-center shrink-0"
+                    >
+                      <span>📧</span>
+                    </div>
+                    <div>
+                      <p class="text-text-primary font-bold">Email</p>
+                      <p class="text-text-secondary mt-1">
+                        missions@cosmos.space
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- social -->
+                  <div
+                    class="flex flex-col items-center md:flex-row md:items-start text-center md:text-left gap-3"
+                  >
+                    <div
+                      class="w-12 h-12 rounded-xl bg-starlight/20 flex items-center justify-center shrink-0"
+                    >
+                      <span>🔢</span>
+                    </div>
+                    <div>
+                      <p class="text-text-primary font-bold">Social</p>
+                      <p class="text-text-secondary mt-1">
+                        @CosmosSpace on all platforms
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- right -->
+            <div>
+              <form
+                class="bg-nebula-purple border border-white/10 rounded-2xl p-8 flex flex-col gap-5"
+              >
+                <!-- full name -->
+                <div class="form-group">
+                  <label class="form-label">Full Name</label>
+                  <input
+                    type="text"
+                    placeholder="John Astronaut"
+                    class="form-input"
+                  />
+                </div>
+
+                <!-- email -->
+                <div class="form-group">
+                  <label class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    placeholder="john@example.com"
+                    class="form-input"
+                  />
+                </div>
+
+                <!-- subject -->
+                <div class="form-group">
+                  <label class="form-label">Subject</label>
+                  <input
+                    type="text"
+                    placeholder="Mission Inquiry"
+                    class="form-input"
+                  />
+                </div>
+
+                <!-- message -->
+                <div class="form-group">
+                  <label class="form-label">Message</label>
+                  <textarea
+                    placeholder="Tell us about your space interests..."
+                    class="form-textarea"
+                  ></textarea>
+                </div>
+
+                <!-- submit -->
+                <button type="submit" class="btn btn-primary w-full mt-2">
+                  Send Message 🚀
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-deep-space h-50"></div>
 
     <!-- cta -->
     <section class="py-12 border-y border-white/20 p-12">

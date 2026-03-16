@@ -354,3 +354,51 @@
 .spec-stat-value {
   @apply text-starlight font-bold text-2xl mt-2;
 }
+/* contact */
+.form-group {
+  @apply flex flex-col gap-2;
+}
+
+.form-label {
+  @apply text-text-secondary text-sm font-semibold;
+}
+
+.form-input {
+  @apply w-full bg-cosmic-blue border border-white/20 rounded-xl px-4 py-3 text-text-primary text-sm placeholder:text-text-secondary focus:outline-none focus:border-starlight/50 transition-colors duration-300;
+}
+
+.form-textarea {
+  @apply w-full bg-cosmic-blue border border-white/20 rounded-xl px-4 py-3 text-text-primary text-sm placeholder:text-text-secondary focus:outline-none focus:border-starlight/50 transition-colors duration-300 resize-none h-32;
+}
+
+.images__wrapper {
+  @apply flex flex-col gap-5 mb-20 md:grid md:grid-cols-4 md:grid-rows-4;
+  grid-template-areas:
+    "a a b c"
+    "a a d d"
+    "e f . ."
+    "e . . .";
+}
+
+.img-a {
+  grid-area: a;
+}
+.img-b {
+  grid-area: b;
+}
+.img-c {
+  grid-area: c;
+}
+.img-d {
+  grid-area: d;
+}
+.img-e {
+  grid-area: e;
+}
+.img-f {
+  grid-area: f;
+}
+
+.images__wrapper img {
+  @apply rounded-2xl object-cover h-[200px] md:w-full md:h-full md:object-cover;
+}
